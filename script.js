@@ -1,116 +1,77 @@
-/*
-var a = 1, b = 1, c, d;
-c = ++a; alert(c);           // 2, так как ++ стоит до a, то в a присваиваться 2 а потом выводиться c
-d = b++; alert(d);           // 1, здесь наоборот сначала выводиться, а потом присваивается в b = 2 
-c = (2+ ++a); alert(c);      // 5, такой же подход как и в первых вычеслениях
-d = (2+ b++); alert(d);      // 4, такой же подход как и в первых вычеслениях
-alert(a);                    // 3
-alert(b);                    // 3
-*/
+// 1 задание
+        var arr = [];
+        var end = 1;
+        while (end < 100){
+            end++;
+            arr.push(end);
+        }
+//      Удаляем все четные цифры
+        var a = 2;
+        var b = 2;
+        while (a <= 100){
+            a += b;
+                arr.splice(arr.indexOf(a), 1);
+        }
+//      Удаляет все цифры которые деляться на нечетные до 10
+        a = 4;
+        b = 3;
+        while (a < 100){
+            if (a % b ===0 && arr.indexOf(a) !== -1){
+                arr.splice(arr.indexOf(a), 1);
+            }else {
+                a++;
+            }
+        }
 
-/* 
-var a = 2; 
-var x = 1 + (a *= 2); // (a *= 2)  = 4 сначала вычисляется это, далее прибавляется 1 ==> x = 5
-*/
+        a = 6;
+        b = 5;
+        while (a < 100) {
+            if (a % b === 0 && arr.indexOf(a) !== -1) {
+                arr.splice(arr.indexOf(a), 1);
+            } else {
+                a++;
+            }
+        }
 
-/*
-var a = 15, b = -4;
-if(a >= 0 && b >= 0){
-    alert(a - b);
-} else if (a < 0 && b < 0){
-    alert(a * b);
-} else {
-    alert(a + b);
-}
-*/
+        a = 8;
+        b = 7;
+        while (a < 100) {
+            if (a % b === 0 && arr.indexOf(a) !== -1) {
+                arr.splice(arr.indexOf(a), 1);
+            } else {
+                a++;
+            }
+        }
 
-/*
-a = +prompt ('Введите число от 1 до 15');
-		switch (a) {
-		case 1:
-			alert ( 'Ваше число 1');
-			break;
-		case 2:
-			alert ( 'Ваше число 2');
-			break;
-		case 3:
-			alert ( 'Ваше число 3');
-			break;
-		case 4:
-			alert ( 'Ваше число 4');
-			break;
-		case 5:
-			alert ( 'Ваше число 5');
-			break;
-		case 6:
-			alert ( 'Ваше число 6');
-			break;
-		case 7:
-			alert ( 'Ваше число 7');
-			break;
-		case 8:
-			alert ( 'Ваше число 8');
-			break;
-		case 9:
-			alert ( 'Ваше число 9');
-			break;
-		case 10:
-			alert ( 'Ваше число 10');
-			break;
-		case 11:
-			alert ( 'Ваше число 11');
-			break;
-		case 12:
-			alert ( 'Ваше число 12');
-			break;
-		case 13:
-			alert ( 'Ваше число 13');
-			break;
-		case 14:
-			alert ( 'Ваше число 14');
-			break;
-		case 15:
-			alert ( 'Ваше число 15');
-			break;	
-		}
-*/
+        console.log(arr);
 
-/*
-    var a = 2;
-    var b = 3;
-
-	function plus(a, b) {
-    return a + b;
-	}
-    
-	function minus(a, b) {
-    return a - b;
-	}
-
-    function div (a, b) {
-    return a / b;
+// 2-3 задание
+var basketPrice = ['tv', 'sofa', 'table'];
+var price = 0;
+function countBasketPrice(arr){
+    for(var i = 0; i <= arr.length; i++){
+        if(arr[i] == 'tv'){
+            price += 900;
+        } else if(arr[i] == 'sofa'){
+            price += 500;
+        } else if(arr[i] == 'table'){
+            price += 1500;
+        } else if(arr[i] == 'chair'){
+            price += 400;
+        } else if(arr[i] == 'cup'){
+            price += 100;
+        }
     }
-
-    function mult (a, b) {
-	return a + b;
-	}
-*/
-
-/*
-function mathOperation(arg1, arg2, operation) {
-    switch (operation) {
-        case 'сложение':
-            return arg1 + arg2;
-            break;
-        case 'вычитание':
-            return arg1 - arg2;
-            break;
-        case 'деление':
-            return arg1 / arg2;
-            break;
-        case 'умножение':
-            return arg1 * arg2;
-            break;
-    }
+    console.log(price);
 }
-*/
+countBasketPrice(basketPrice);
+
+
+
+
+
+
+// 4 задание
+for(var i = 0; i <= 9; console.log(i), i++){}
+// 5 задание
+for(var i = 1, word = "x"; i <= 20; console.log(word), word += "x", i++){}
